@@ -3,7 +3,7 @@ PROBLEMA 2.2
 Scrivere un programma che acquisisca le calorie assunte in una settimana da un insieme di 5 individui e
 ne calcoli la media (per ogni individuo e complessiva).
 
-Requisiti: utilizzare una matrice​.asm
+Requisiti: utilizzare una matrice​
 
 Input:
 Matrice 5 x 7, che memorizza le calorie assunte dagli individui​
