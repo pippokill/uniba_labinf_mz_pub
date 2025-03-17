@@ -31,12 +31,19 @@ int main()
         scanf("%2s", &archivio[i].uscita.mese);
         printf("Film n.%d Inserisci anno di pubblicazione:", i + 1);
         scanf("%u", &archivio[i].uscita.anno);
-        printf("Film n.%d Inserisci durata:", i + 1);
-        scanf("%u", &archivio[i].durata);
+        do
+        {
+            printf("Film n.%d Inserisci durata:", i + 1);
+            scanf("%u", &archivio[i].durata);
+            if (&archivio[i].durata <= 0)
+            {
+                printf("\nValore durata non valido, la durata deve essere maggiore di 0.");
+            }
+        } while (&archivio[i].durata <= 0);
     }
     // Ciclo di Stampa  ​
     for (unsigned int j = 0; j < NUM_FILMS; j++)
     {
-        printf("\n%s\t%s\t%u/%u\t%u\n", archivio[j].titolo, archivio[j].genere, archivio[j].uscita.mese, archivio[j].uscita.anno, archivio[j].durata);
+        printf("\n%s\t%s\t%s/%u\t%u\n", archivio[j].titolo, archivio[j].genere, archivio[j].uscita.mese, archivio[j].uscita.anno, archivio[j].durata);
     }
 }
