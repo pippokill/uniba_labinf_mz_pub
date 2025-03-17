@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define NUM_FILMS 5
-#define MAX_LUNGHEZZA_TITOLO 10
+#define MAX_LUNGHEZZA_TITOLO 20
 #define MAX_LUNGHEZZA_GENERE 10
 
 typedef struct
@@ -19,16 +19,16 @@ typedef struct
 
 int main()
 {
-    film archivio[NUM_FILMS] = {{"", "", {"", 0}, 0}}; // variabile archivio ​
+    film archivio[NUM_FILMS] = {"", "", {"", 0}, 0}; // variabile archivio ​
     // Acquisizione input​
     for (unsigned int i = 0; i < NUM_FILMS; i++)
     {
         printf("Film n.%d Inserisci titolo:", i + 1);
-        scanf("%15s", archivio[i].titolo); // NOTA: non accetta spazi
+        scanf("%20s", archivio[i].titolo); // NOTA: non accetta spazi
         printf("\nFilm n.%d Inserisci genere:", i + 1);
         scanf("%10s", archivio[i].genere); // NOTA: non accetta spazi
         printf("Film n.%d Inserisci mese di pubblicazione:", i + 1);
-        scanf("%s", &archivio[i].uscita.mese);
+        scanf("%2s", &archivio[i].uscita.mese);
         printf("Film n.%d Inserisci anno di pubblicazione:", i + 1);
         scanf("%u", &archivio[i].uscita.anno);
         printf("Film n.%d Inserisci durata:", i + 1);
