@@ -7,5 +7,5 @@
 
     printf("Nome dell'array:\t%X\n", array);
     printf("Indirizzo del primo elemento:\t%X\n", &array[0]);
-    printf("Puntatore all'array:\t%X\n", array);
+    printf("Puntatore all'array:\t%X\n", p_array);
  }
