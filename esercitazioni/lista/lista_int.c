@@ -81,7 +81,7 @@ list addAt(list l, int i, int elem)
     if (i == 0)
     {
         item *n = (item *)malloc(sizeof(item));
-        (*n).next = (*l).next;
+        (*n).next = l;
         (*n).elem = elem;
         l = n;
     }
